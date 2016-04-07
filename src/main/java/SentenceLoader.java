@@ -8,8 +8,8 @@ import java.util.LinkedList;
 
 public class SentenceLoader {
 
-    public LinkedList<String> loadSentences(String pathToFile) throws IOException {
-
+    public LinkedList<String> loadSentences(String pathToFile) throws IOException
+    {
         LinkedList<String> sentences = new LinkedList<>();
 
         ClassPathResource resource = new ClassPathResource(pathToFile);
@@ -19,7 +19,6 @@ public class SentenceLoader {
         iterator.setPreProcessor((SentencePreProcessor) sentence -> sentence.toLowerCase());
 
         return sentences;
-
     }
 
 }

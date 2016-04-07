@@ -1,7 +1,7 @@
 public class Main {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args)
+    {
         // Steps
         // 1. Load data (sentences)
         // 2. Preprocess data
