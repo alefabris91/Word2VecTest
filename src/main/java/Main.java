@@ -1,15 +1,18 @@
+import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
+
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, URISyntaxException {
         // Steps
-        // 1. Load data (sentences)
-        String pathToCorpus = "./../res/corpus.txt";
+        // 1. Load data (as "sentences") & 2. Preprocess data
+        // Note: Sentences = blocks of text, not necessarily actual sentences
+        String pathToCorpus = "/mockData.txt";
         SentenceLoader sl = new SentenceLoader(pathToCorpus);
-        sl.loadSentences();
+        SentenceIterator iterator = sl.loadSentences();
 
-        // 2. Preprocess data
         // 3. Tokenise data
         // 4. Train the model
         // 5. Evaluate the model

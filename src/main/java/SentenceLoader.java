@@ -1,9 +1,10 @@
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
-import org.nd4j.linalg.io.ClassPathResource;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.LinkedList;
 
 public class SentenceLoader
@@ -15,16 +16,21 @@ public class SentenceLoader
         this.pathToFile = pathToFile;
     }
 
-    public LinkedList<String> loadSentences() throws IOException {
+    public SentenceIterator loadSentences() throws IOException, URISyntaxException
+    {
         LinkedList<String> sentences = new LinkedList<>();
 
-        ClassPathResource resource = new ClassPathResource(pathToFile);
-        SentenceIterator iterator = new LineSentenceIterator(resource.getFile());
+        File file = new File( this.getClass().getResource( pathToFile ).toURI() );
+        SentenceIterator iterator = new LineSentenceIterator(file);
 
         // Pre-processing - converts sentences to all lower case
         iterator.setPreProcessor((SentencePreProcessor) sentence -> sentence.toLowerCase());
 
-        return sentences;
+        while (iterator.hasNext()) {
+            sentences.add(iterator.nextSentence());
+        }
+
+        return iterator;
     }
 
 }
