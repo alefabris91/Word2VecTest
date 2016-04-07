@@ -6,10 +6,16 @@ import org.nd4j.linalg.io.ClassPathResource;
 import java.io.IOException;
 import java.util.LinkedList;
 
-public class SentenceLoader {
+public class SentenceLoader
+{
+    private String pathToFile;
 
-    public LinkedList<String> loadSentences(String pathToFile) throws IOException
+    public SentenceLoader(String pathToFile)
     {
+        this.pathToFile = pathToFile;
+    }
+
+    public LinkedList<String> loadSentences() throws IOException {
         LinkedList<String> sentences = new LinkedList<>();
 
         ClassPathResource resource = new ClassPathResource(pathToFile);
