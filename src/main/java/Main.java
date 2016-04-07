@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Steps
-        // 1. Load data
+        // 1. Load data (sentences)
         // 2. Preprocess data
         // 3. Tokenise data
         // 4. Train the model
