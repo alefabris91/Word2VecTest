@@ -7,17 +7,14 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.LinkedList;
 
-public class SentenceLoader
-{
+public class SentenceLoader {
     private String pathToFile;
 
-    public SentenceLoader(String pathToFile)
-    {
+    public SentenceLoader(String pathToFile) {
         this.pathToFile = pathToFile;
     }
 
-    public SentenceIterator loadSentences() throws IOException, URISyntaxException
-    {
+    public SentenceIterator loadSentences() throws IOException, URISyntaxException {
         LinkedList<String> sentences = new LinkedList<>();
 
         File file = new File( this.getClass().getResource( pathToFile ).toURI() );

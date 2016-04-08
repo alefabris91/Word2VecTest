@@ -1,9 +1,5 @@
 # Word2VecTest
-Trial project using DL4J and Word2Vec
-
-## Aims
-* Experimenting with ML and NLP
-* Specific aims TBC
+Experimenting with natural language processing using DL4J Java library
 
 ## Based on the following tutorials:
 * http://deeplearning4j.org/word2vec
