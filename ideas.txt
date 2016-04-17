@@ -1,0 +1,24 @@
+IDEA 1: THE IMPORTANCE OF A DATA SET
+Training the algorithm with different data-sets, noticing interesting diferences, finding a good way to present them graphycally
+
+e.g. 
+- gather 2 data-sets, one being a bunch of articles from a hyper-left-wing paper, one being a bunch of articles from a hyper right-wing-paper.
+- train a separate model with each data-set.
+- play around with the results:
+	-> Look for similarities in couples of words: 
+	   I expect for instance that from the right-wing data set the words immigrant and criminal are going to be 'closer' than the same two words learnt from the left-wing data set
+	-> Look at single words and find the ones closest to them:
+	   Take key words from hot topics (e.g. Europe, Refugee, ...) find which words are 'closer' to them (e.g. danger, opportunity,...?)
+	-> Use clustering algorithms, see differences in clusters formed
+	-> Anthing else that comes to mind!
+- Find an interesting infographics-like way to present the information found.
+
+Challenges:
+- Obtaining data sets
+- Presenting information
+
+Perks:
+- The ML bit shouldn't be too challenging (as it's our first project in this area I think this is important)
+- Gain interesting and objective insight in how media can influence thought
+- Chance to make project interesting for many audiences (easy to explain and grasp gist)
+- Learn techniques to graphically present findings. If we do a good job and get some cool graphs I believe this is more noticeable than a 'boring' code-only project (e.g. for job interviews).
